@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Harvard Academy</title>
+       
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body class="override">
+     <!-- Navigation (Sits on top) -->
+    <div class="w3-top w3-bar w3-white w3-padding-top-64 w3-card w3-wide">
+    <a href="/admin/login" class="w3-bar-item w3-button">Admin</a>
+    <a href="/admin/Course/course/" class="w3-bar-item w3-button">Course</a>
+    <a href="/admin/Student/student/" class="w3-bar-item w3-button">Student</a>
+    <a href="/admin/Teacher/teacher" class="w3-bar-item w3-button">Teacher</a>
+    </div> 
+
+        <div class="container">
+            <div class="row well ml-t">
+                <div class="col-lg-8 col-md-8">    
+                    <h4>Developed by: <a href="https://harvardacademy.edu.np" target="_blank">Dipendra KC</a></h4>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <p class="m-t">Copyright &copy Harvard Academy - 2023</p>
+                    <p>All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <marquee onmouseover="stop()" onmouseout="start()">
+        A School of every Students&Parents Choice! &nbsp;&nbsp;&nbsp;
+    </marquee> 
+    <font color="Green" size="5">
+<b> <u> Features: </u></b>    <br>
+</font>
+
+<font size="4">
+<a href="/admin/login"> 1. Admin Page</a><br>
+<a href="/admin/Course/course/"> 2. Course Details </a><br>
+<a href="/admin/Student/student/"> 3. Student Details </a><br>
+<a href="/admin/Teacher/teacher"> 4. Teacher Details </a><br>
+
+{% if user.is_authenticate %}
+Hi, {{user.first_name}}
+<a href="App/logout"> Logout </a><br>
+{% else %}
+<a href="App/register"> Register </a><br>
+<a href="App/login">  Sign-in </a><br>
+{% endif %}
+</font>
+
+</body>
+</html>
