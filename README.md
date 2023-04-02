@@ -1,7 +1,7 @@
 Title: Student Management System
 
 Django Link: http://127.0.0.1:8000/
-Git-hub Repository: https://github.com/dipendra50/portfolioproject.git
+Git-hub Repository: https://github.com/kc-dipendra/portfolioproject.git
 
 **Description**: 
 The student management system has been created using Python & Django. For the database, I am using 'SQLite'. It is a web-based program which gives user an interacive menus.
