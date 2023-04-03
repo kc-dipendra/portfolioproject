@@ -18,7 +18,7 @@ def login(request):
         return render(request,'login.html')
     
 def register(request):
-    if request.method=='POST':
+    if request.method =='POST':
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
         username = request.POST['username']
@@ -26,15 +26,15 @@ def register(request):
         password2 = request.POST['password2']
         email = request.POST['email']
 
-        if password1==password2:
+        if password1 == password2:
             if User.objects.filter(username=username).exists():
                 messages.info(request,'Username already exist!')
                 return redirect('register')
-            elif User.objects.filter(email=email):
+            elif User.objects.filter(email=email).exists():
                 messages.info(request,'Email already used!')
                 return redirect('register')
             else:
-                user = User.objects.create_user(username=username,password=password1,email=email,first_name=first_name,last_name=last_name)
+                user = User.objects.create_user(username=username, password=password1, email=email, first_name=first_name, last_name=last_name)
                 user.save();
                 #messages.info(request,'user successfully created')
                 print('user created successfully !')

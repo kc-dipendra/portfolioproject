@@ -9,16 +9,10 @@
 <body>
     <form action="login" method="post">
         {% csrf_token %}
-        <div class="mb-3">
-          <label for="username" class="form-label">User Name</label>
-          <input type="text" class="form-control" id="username">
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+          Username: <input type="text" name="username" placeholder="username"> <br>
+          Password: <input type="password" name="password" placeholder="password"> <br>
+        <button type="submit"> Submit </button>
+      </form> 
 
     <div>
         {% for message in messages %}
