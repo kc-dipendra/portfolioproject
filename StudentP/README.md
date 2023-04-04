@@ -8,7 +8,9 @@ The student management system has been created using Python & Django. For the da
 
 **Instruction to start**
 From the terminal, locate your project folder, where your ‘manage.py’ is located.
+To start the server:
 Run ‘python3 manage.py runserver’
+
 In the browser, type ‘127.0.0.1:8000’
 Your’ll see a home page.
 Sign-in to see the features, else get registered in not. Normal user cannot do all the activities.
