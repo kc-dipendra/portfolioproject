@@ -3,6 +3,8 @@ from django.urls import path, include
 from StudentP import views
 from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.views.static import serve
+from django.conf.urls import url
 
 admin.site.site_header="Welcome to our world!"
 admin.site.site_title="xxx"
@@ -15,6 +17,8 @@ urlpatterns = [
     path('create_user', views.create_user),
     path('feedback', views.feedback),
     path('App/',include('App.urls'))
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
